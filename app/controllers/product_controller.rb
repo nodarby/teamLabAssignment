@@ -1,5 +1,6 @@
 class ProductController < ApplicationController
   def index
-    render file:'public/index.html',layout:false,content_type: 'text/html'
+    render json: {main:"hello"}
   end
+
 end

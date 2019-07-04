@@ -37,9 +37,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'rack-cors'
 
-gem 'jquery-rails'
-gem 'jquery-turbolinks'
-
 group :production do
   gem 'pg'
 end

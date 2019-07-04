@@ -25,14 +25,14 @@ class ProductController < ApplicationController
 
   #データ削除　/product/(:id)
   def destroy
-    product = Product.find_by!(params[:id])
+    product = Product.find_by!(title: params[:title])
     product.destroy
     render json:{main:product}
   end
 
   #データ変更　/product/(:id)
   def update
-    product = Product.find_by!(params[:id])
+    product = Product.find_by!(title: params[:title])
     if post.update(post_params)
       render json:{main:product}
     else

@@ -1,1 +1,26 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function index(){
+            var request = new XMLHttpRequest();
+
+            request.open('GET', 'https://noda-teamlab.herokuapp.com/product', true);
+            request.responseType = 'json';
+
+            request.onload = function () {
+                var data = this.response;
+                console.log(data);
+            };
+
+            request.send();
+            return 0
+        }
+
+
+    </script>
+</head>
+<body>
+<button onclick="index()">All date get!</button>
+</body>
+</html>

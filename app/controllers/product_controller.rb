@@ -37,7 +37,7 @@ class ProductController < ApplicationController
       render json:{main:product}
     else
       render json:{main:product}
-    end
+    end.
   end
 
   private
